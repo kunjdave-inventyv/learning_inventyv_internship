@@ -7,59 +7,65 @@
 
 body {
   height: 100vh;
-  background: #f4f6f8;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .container {
   display: flex;
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
 }
 
 .left {
-  width: 70%;
+  width: 70vw;
+  min-width: 70vw;
+  height: 100vh;
   background: #1e40af;
   color: white;
   display: flex;
   align-items: center;
-  padding: 80px;
+  padding: 5vw;
 }
 
-
+.right {
+  width: 30vw;
+  min-width: 30vw;
+  height: 100vh;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .logo {
-  height: 150px;
-  width: 150px;
-  border-radius: 100%;
+  height: 9rem;
+  width: 9rem;
+  border-radius: 50%;
   background: white;
   color: #1e40af;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  margin-bottom: 40px;
-  padding: 10px;
-}
-.logo-outerdiv{
-    display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.brand p {
-  font-size: 18px;
- 
+  margin-bottom: 2.5rem;
+  padding: 0.75rem;
 }
 
-.right {
-  width: 30%;
-  background: white;
+.logo-outerdiv {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.brand p {
+  font-size: 1.125rem;
+}
+
 .auth-card {
+  margin-top: 1rem;
   width: 100%;
-  max-width: 320px;
+  max-width: 20rem;
 }
 
 .radiobuttons {
@@ -69,19 +75,17 @@ body {
 .toggle {
   display: flex;
   background: #e5e7eb;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 .tab {
   flex: 1;
-  padding: 10px;
+  padding: 0.625rem;
   text-align: center;
-  font-size: 14px;
+  font-size: 0.875rem;
   cursor: pointer;
   color: #374151;
 }
-
-
 
 .form {
   display: none;
@@ -96,32 +100,47 @@ body {
 }
 
 .form h2 {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .form input {
   width: 100%;
-  padding: 10px 12px;
-  margin-bottom: 14px;
+  padding: 0.625rem 0.75rem;
+  margin-bottom: 0.875rem;
 }
-
 
 .submit {
   width: 100%;
-  padding: 10px;
+  padding: 0.625rem;
   background: #2563eb;
   border: none;
   color: white;
 }
 
-
 .switch {
-  margin-top: 16px;
-  font-size: 13px;
+  margin-top: 1rem;
+  font-size: 0.8125rem;
   text-align: center;
 }
 
 .switch label {
   color: #2563eb;
   cursor: pointer;
+}
+
+@media (max-width: 48em) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100vw;
+    min-width: 100vw;
+    height: auto;
+  }
+
+  .left {
+    padding: 4vw;
+  }
 }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function solve(){
+            let n = document.getElementById("input").value;
+            let i, j;
+            let result = []
+            for (i = 0; i < n; i++) {
+            let ans = "";
+            for (j = 0; j < n; j++) {
+                min = Math.min(i + 1, j + 1, n - i, n - j);
+                ans += min;
+            }
+            result.push(ans);
+            console.log(ans);
+        }
+        document.getElementById("ans").value = result.join("\n");
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="number" name="" id="input">
+        <button onclick="solve()">submit</button>
+    </div>
+    <div>
+        <textarea name="" id="ans"></textarea>
+    </div>
+    
+</body>
+</html>
