@@ -1,0 +1,17 @@
+[workspace]
+members = [
+    "control_flow",
+    "generic_type_task",
+    "hashmap_task",
+    "hashset_task",
+    "inventory_task",
+    "lifetime_task",
+    "moduling_all_tasks",
+    "ownership_borrow",
+    "serialise_deserialise",
+    "deserialise_raw_string",
+    "server_request_task/mutex_approach",
+    "server_request_task/rw_lock_approach",
+    "structure_with_getter_setter",
+    "thread_task"
+    , "http_server"]
